@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Final Project</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Overlock&display=swap" rel="stylesheet">
+	<script src="formvalidations.js"></script>
+</head>
+<body>
+	<!--Below is a calculation of the customer's final amount along with carrybag and GST values.-->
+		<h2>Final Receipt Generation</h2>
+		<h3>Thank you for shopping with us. Please enter your details to generate the final amount.</h3>
+		<h3>Enter your credentials.</h3>
+		<form>
+			<label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="*must of 3 characters minimum" onblur="validateFname();" required><span id="message1"></span><br>
+  			<label for="lname">Last name:</label><br>
+  			<input type="text" id="lname" name="lname" placeholder="*must of 3 characters minimum" onblur="validateLname();" required><span id="message2"></span><br>
+  			<label for="gender">Gender:</label><br>
+  			<input type="radio" id="male" name="gender" value="Male">
+  			<label for="male">Male</label><br>
+  			<input type="radio" id="female" name="gender" value="Female">
+  			<label for="female">Female</label><br>
+  			<input type="radio" id="other" name="gender" value="Other">
+  			<label for="other">Rather not say!</label><br>
+  			<button type="button" onclick="validateGender();">See your gender</button><span id="message3"></span><br>
+  			<label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" placeholder="*enter a valid email ID" required><br>
+            <label for="phone">Phone:</label><br>
+            <input type="text" id="phone" name="phone" placeholder="*XXXX-XXX-XXX format" onblur="validatePhone();" required><span id="message5"></span><br>
+            <label for="computer">Which of these did you buy?</label><br>
+            <input type="checkbox" id="keyboard" name="computer" value="keyboard">
+  			<label for="keyboard">Keyboard</label><br>
+  			<input type="checkbox" id="mouse" name="computer" value="mouse">
+  			<label for="mouse">Mouse</label><br>
+  			<input type="checkbox" id="monitor" name="computer" value="monitor">
+  			<label for="monitor">Monitor</label><br>
+  			<button type="button" onclick="calculateMRP();">Total price of purchased item without tax</button><span id="message6"></span><br>
+  			<label for="options">Do you want carry bag ?</label><br>
+  			<input type="radio" id="yes" name="options" value="yes">
+  			<label for="yes">Yes</label><br>
+  			<input type="radio" id="no" name="options" value="no">
+  			<label for="no">No</label><br>
+
+  			<button type="button" onclick="receiptGeneration();">Print your receipt</button><br>
+
+  			<!--Below shows the details of the user along with final amount to be payed by the customer -->
+
+  			<p class="sansserif" id="receipt"></p>
+  			<p class="sansserif" id="receipt1"></p>
+  			<p class="sansserif" id="receipt2"></p>
+  			<p class="sansserif" id="receipt3"></p>
+  			<p class="sansserif" id="receipt4"></p>
+  			<p class="sansserif" id="receipt5"></p>
+  			<p class="sansserif" id="receipt6"></p>
+  			<p class="sansserif" id="receipt7"></p>
+
+  			<img id="receipt8" src="receipt8" />
+
+
+
+		</form>
+
+</body>
+</html>
